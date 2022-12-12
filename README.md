@@ -14,12 +14,16 @@ Instrumentation tests can be used to test none UI related logic also.
 Especially useful when we need to test code that has a dependency on a context.
 Especially useful to launch particular activity seperately and will test it UI related functionality.
 
-i have used this dependencies in my Android Studio(BumbleBee) Project with Java11.
-androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-androidTestImplementation 'androidx.test:rules:1.5.0'
+we have used below dependencies in my Android Studio(BumbleBee) Project and have to select Java11 version. Path below.
 
 AndroidStudio-File-Settings-Build,Execution,Deployment-BuildTools-Gradle-we have to select 11 version Jre file from Program Files under c folder.
+
+androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+
+androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+androidTestImplementation 'androidx.test:rules:1.5.0'
+
 ------------------------------------------------------------
 Unit Test:
 ------------------------------------------------------------
