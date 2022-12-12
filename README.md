@@ -12,6 +12,7 @@ which will control our app, launching it and running UI tests as needed.
 Instrumentation tests can be used to test none UI related logic also.
 
 Especially useful when we need to test code that has a dependency on a context.
+
 Especially useful to launch particular activity seperately and will test it UI related functionality.
 
 we have used below dependencies in my Android Studio(BumbleBee) Project and have to select Java11 version. Path below.
