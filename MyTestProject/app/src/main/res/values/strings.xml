@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Test Project</string>
+
+
+    <string name="login_page_login_issue">Please contact your admin. In case any login issue</string>
+    <string name="login_page_signin">Login</string>
+    <string name="login_page_signup">SignUp</string>
+    <string name="login_page_create_account"><u><font color='#6495ED'>Create Account?</font></u></string>
+    <string name="entry_page_title_technical"><font color='#FF0004'>T</font><font color='#DFFF00'>e</font><font color='#FFBF00'>c</font><font color='#DE3163'>h</font><font color='#6495ED'>n</font><font color='#CCCCFF'>i</font><font color='#00FF00'>c</font><font color='#0000FF'>a</font><font color='#999999'>l</font><font color='#008080'> C</font><font color='#00FF00'>o</font><font color='#CD5C5C'>m</font><font color='#000080'>p</font><font color='#40E0D0'>r</font><font color='#008000'>e</font><font color='#00FFFF'>h</font><font color='#808000'>e</font><font color='#800080'>n</font><font color='#FF00FF'>s</font><font color='#FF00FF'>i</font><font color='#ff8000'>o</font><font color='#800080'>n</font></string>
+
+    
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_title_20sp">20sp</dimen>
+    <dimen name="text_size_title_15sp">15sp</dimen>
+    <dimen name="text_size_question_title_13sp">13sp</dimen>
+    <dimen name="text_size_question_title_12sp">12sp</dimen>
+
+    <dimen name="layout_margin_10dp">10dp</dimen>
+    <dimen name="layout_margin_5dp">5dp</dimen>
+    <dimen name="layout_margin_3dp">3dp</dimen>
+
+    <dimen name="layout_padding_3dp">3dp</dimen>
+    <dimen name="layout_padding_5dp">5dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+</resources>
