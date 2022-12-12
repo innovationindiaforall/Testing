@@ -23,4 +23,4 @@ Unit Test:
 //Unit tests
 src/test/java
 
-its runs on local JVM machine in Android Studio itself, without emulator or mobile device.
+Unit Test cased runs on local JVM machine in Android Studio itself, without emulator or mobile device.
