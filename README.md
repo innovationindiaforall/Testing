@@ -33,16 +33,15 @@ Path: AndroidStudio-File-Settings-Build,Execution,Deployment-BuildTools-Gradle-w
 ------------------------------------------------------------
 Unit Test:
 ------------------------------------------------------------
+UI test cases written under the below folder
 //Unit tests
 src/test/java
-
-its runs on local JVM machine in Android Studio itself, without emulator or mobile device.
+- its runs on local JVM machine in Android Studio itself, without emulator or mobile device.
 ------------------------------------------------------------
 
 BDD:
-It covers whole application software behaviours, with help of automated scripts.
-
-customers, Testers, BA are involved in this BDD Automation Testing.
+ - It covers whole application software behaviours, with help of automated scripts.
+ - ex:customers, Testers, BA are involved in this BDD Automation Testing.
 ------------------------------------------------------------
 TDD:
 TDD focused on specific feature implemented in product or application.
