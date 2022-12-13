@@ -20,8 +20,11 @@ which will control your app, launching it and running UI tests as needed.
 7). we have used below dependencies in my Android Studio(BumbleBee) Project and have to select Java 11 version-Path below given.
 
 /* Dependencies used for Instrumentation Testing. */
+
 androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+
 androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
 androidTestImplementation 'androidx.test:rules:1.5.0'
 
 Path: AndroidStudio-File-Settings-Build,Execution,Deployment-BuildTools-Gradle-we have to select 11 version Jre file from Program Files under c folder.
