@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:context=".LoginActivity">
+
+
+
+    <TextView
+        android:id="@+id/txtview_SecondBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="top|center"
+        android:text="Second Page: Click Here to go Next"
+        android:textSize="25dp"
+        android:textStyle="bold"></TextView>
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+----------------------------------------------------------------------------------------------------
+Android Studio: BDD Automation UI Testing with Espresso Framework and Cucumber with Gherkin Language
+----------------------------------------------------------------------------------------------------
+BDD:
+BDD is a software development approach, which is developed from TDD. ( Test Driven Development )
+----------------------------------------------------------------------------------------------------
+Required items to run BDD Automation UI Testing in Android Studio:
+
+Environment Setup in AS:
+Android Studio(BumbleBee) & Java 11 & Necessary Automation UI Testing Tools Related Plugins.
+Java11 Path: File-->Settings-->Build,Execution,Deployment-->BuildTools-->Gradle-->Gradle JDK--> 11 Version of jre.
+
+Need to Install Cucumber and Gherkin plugins in Android Studio First.
+Path: Files --> Settings --> Plugins--> Cucumber / Gherkin( search and install it under the MarketPlace Tab in AS)
+
+we have to add following dependencies in app module build.gradle file to support BDD UI Testing:
+
+androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+androidTestImplementation 'info.cukes:cucumber-android:1.2.5@jar'
+androidTestImplementation 'info.cukes:cucumber-picocontainer:1.2.4'
+
+androidTestImplementation 'com.android.support.test:rules:1.0.2'
+androidTestImplementation 'com.android.support.test:runner:1.0.2'
+androidTestImplementation 'androidx.test.espresso:espresso-web:3.1.1' //For webview(optional)
+----------------------------------------------------------------------------------------------------
+Cucumber:
+
+Cucumber tool used to write BDD(Behaviour Driven Development).
+it provides easily understandable test scripts for system accepting and automation testing.
+Test Case Scenarios are written in Gherkin language. gherkin language easy to understand
+business users and stack holders.
+
+First, we have to create .feature file under androidTest/assets/features/login.feature package.
+
+Features of Cucumber:
+
+Gherkin:
+Cucumber tool reads the step written in a Gherkin or plain English text inside the feature file.
+
+Feature file: Steps for the scenario is written in this class
+
+Feature: Enter login details: it is just a text description of the feature file;
+
+@smoke and @e2e: are our custom Cucumber tags that should help us to run subsets of BDD UI tests.
+
+Scenario Outline: Input username and password
+
+Scenarios
+
+Given, When, And, Then — Each step starts with Given, When, Then, And, or But.
+These are additional Gherkin keywords, helping us to define our test steps.
+Cucumber executes each step in one scenario at a time, in the sequence you’ve written them in.
+When Cucumber tries to execute a step, it looks for a matching step definition implementation to execute.
+----------------------------------------------------------------------------------------------------
+Step Definition
+
+we have to write step definition file under this path: androidTest--> java-->com.example.bdd.test-->MainActivityTest.java
+
+@SmallTest
+@RunWith(AndroidJUnit4ClassRunner.class)
+public class MainActivityTest {
+
+@Rule
+public ActivityTestRule<LoginActivity> activityTestRule = new ActivityTestRule<>(LoginActivity.class);
+@Rule
+private LoginActivity activity;
+
+@Before("@login-feature")
+public void setup() {
+    activityTestRule.launchActivity(new Intent());
+    activity = activityTestRule.getActivity();
+}
+@Given("^I have a login activity")
+public void I_have_a_login_activity() {
+    assertNotNull(activity);
+}
+@When("^I input username (\\S+)$")
+public void I_input_username(final String username) {
+    onView(withId(R.id.editTextTextPersonName)).perform(typeText(username));
+}
+etc........
+----------------------------------------------------------------------------------------------------
+How to setup the Cucumber configuration in the project:
+
+In app module -> androidTest folder create new package, named test and create one new class file named
+CucumberExamTestCase (the name does not really matter) and put this source code:
+
+eg:1
+import cucumber.api.CucumberOptions;
+import cucumber.api.CucumberOptions
+@CucumberOptions(features = ["features"],
+glue = ["com.example.bdd.test"],
+tags = ["@e2e", "@smoke"])
+@SuppressWarnings("unused")
+class CucumberExamTestCase
+{
+}
+CucumberTestCase class should stay empty and we don’t need any implementation inside.
+
+Path to the glue files:
+The glue setting in the CucumberOptions annotation is about Cucumber path for the Step Definition/implementations class.
+
+eg:2
+@CucumberOptions(features = "features", glue = "com.example.bdd.test")
+public class Instrumentation extends MonitoringInstrumentation {
+}
+----------------------------------------------------------------------------------------------------
+Android, Java, Kotlin, AndroidStudio, SDK, Framework, Recyclerview, CardView, Jetpack, MVC, MVP, MVVM
+Service, Broadcast, Telephony, CallDetector, RuntimePermissions
+IOT, Bluetooth, NFC
+Testing, UnitTesting, InstrumentationTesting, TDD, BDD, Automation, Espresso, Cucumber, Gherkin, LoadTest
+----------------------------------------------------------------------------------------------------

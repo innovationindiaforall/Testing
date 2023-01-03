@@ -1,0 +1,37 @@
+----------------------------------------------------------------------------------------------------
+Android Studio: BDD Automation UI Testing with Espresso Framework and Cucumber with Gherkin Language
+----------------------------------------------------------------------------------------------------
+                            BDD(Behaviour-Driven Development)
+----------------------------------------------------------------------------------------------------
+step1:
+we need to install two plugin in our Android Studio. Cucumber & Gherkin
+Path: Files --> Settings --> Plugins--> Cucumber / Gherkin( search and install it under the MarketPlace Tab in AS)
+
+step2:
+we have to add applicationId and Instrumentationrunner package id inside defaultConfig in build.gradle file
+also, we have to add below mentioned dependencies.
+
+androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+androidTestImplementation 'info.cukes:cucumber-android:1.2.5@jar'
+androidTestImplementation 'info.cukes:cucumber-picocontainer:1.2.4'
+
+androidTestImplementation 'com.android.support.test:rules:1.0.2'
+androidTestImplementation 'com.android.support.test:runner:1.0.2'
+
+step3:
+we have to create .feature file under this package: androidTest/assets/features/login.feature package.
+then, we have to write test case scenarios in this feature file.
+while writing steps, we have to follow necessary syntax tags.
+
+step4:
+then, we have to write step definition fine under path
+path: androidTest--> java-->com.example.bdd.test-->MainActivityTest.java
+while writing step definition, we have to follow necessary syntax tags.
+
+step5:
+then, we have to configure cucumber configuration in the project.
+
+ste6:
+Especially, we are going to auto test for webview loaded url particular website login page.
+
+
